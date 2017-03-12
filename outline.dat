@@ -33,11 +33,15 @@ j = columns
 first row in matrix is column names
 
 -----------------------------------
+database size
+
+40 columns
+1662 rows
 
 matrix[i][0] = target words
 
 target words are sorted in alphabetical order,
-could use a binary search to find entries in matrix
+uses a binary search to find entries in matrix
 
 once word is located, extract row information
 else print error message, search next word... etc
@@ -48,10 +52,13 @@ else print error message, search next word... etc
 ALSO:
 - might need space trimmer that takes leading && trailing whitespace off
 
+- should probably rename the columns to shorter names.
+
+- searches should be executed sequentially when reducing the matrix
+
+- debate between using only 1 output file OR a separate output for each reduction
+  the issue would be making sure that the previous data written to the file is not overwritten with each new output.
+  this could involve keeping the output file open the whole time, or taking precautions to append the new searches in a non destructive way.
 
 ================
 
-dbase size
-
-40 columns
-1662 rows
