@@ -1,0 +1,57 @@
+the program will read in the data base
+"spp_excel.csv"
+
+then the program will read in the command file
+"user_args.txt"
+
+command file format
+    - the first line of the file will contain arguments to be executed on the data,
+      form of CSV List, where each string in CSV List is an operation that will narrow down results
+      (make a list)
+       
+    - all lines after the first line will be target words to search the data base for (make a list)
+    
+the program will open an output file for writing results of searches to the file
+
+search the user's list of target words first and make a reduced matrix of those words, output to file,
+move to next step once word_list.empty()
+
+then apply the narrowing criteria from queue inorder one at a time to smaller matrix,
+make a reduced matrix of those words, output to file, etc...
+
+keep going until ( list.empty() || reduced search matrix.size() == 0)
+
+----------------------------------
+
+vector< vector<string> > matrix;
+
+matrix[i][j]
+
+i = rows
+j = columns
+
+first row in matrix is column names
+
+-----------------------------------
+
+matrix[i][0] = target words
+
+target words are sorted in alphabetical order,
+could use a binary search to find entries in matrix
+
+once word is located, extract row information
+else print error message, search next word... etc
+
+---------------------------------------
+
+
+ALSO:
+- might need space trimmer that takes leading && trailing whitespace off
+
+
+================
+
+dbase size
+
+40 columns
+1662 rows
